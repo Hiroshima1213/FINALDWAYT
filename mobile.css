@@ -1,0 +1,224 @@
+/* =========================================
+   DWAYT MOBILE VIEW
+   Loaded AFTER style.css. Only phones and
+   tablets are affected, desktop is untouched.
+========================================= */
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.track-result {
+    margin: 4px 0 16px;
+    text-align: left;
+    white-space: pre-line;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.7;
+    color: #111;
+}
+
+/* phones/tablets can't hover: always show ADD TO BAG */
+@media (hover: none) {
+    .quick-add {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+
+/* ---------- TABLET + PHONE ---------- */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        height: 64px;
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+
+    .menu-btn {
+        display: inline-block;
+    }
+
+    /* the desktop links were hidden with no replacement, so this is the mobile menu */
+    .nav-links.open {
+        display: flex;
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        margin: 0;
+        padding: 6px 20px 14px;
+        background: #fff;
+        border-bottom: 1px solid #e7e7e7;
+        z-index: 999;
+    }
+
+    .nav-links.open a {
+        width: 100%;
+        padding: 16px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 12px;
+    }
+
+    .nav-links.open a:last-child {
+        border-bottom: none;
+    }
+
+    /* bigger tap targets */
+    .icon-btn,
+    .filter-btn,
+    .faq-question,
+    .quantity-controls button,
+    .remove-item,
+    .payment-option {
+        min-height: 44px;
+    }
+
+    /* 16px stops iPhones from zooming in when a field is tapped */
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+
+    .cart-drawer {
+        height: 100vh;
+        height: 100dvh;
+        width: 100%;
+    }
+
+    .modal {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .checkout-modal,
+    .gcash-modal,
+    .success-modal,
+    .admin-login-modal {
+        width: 100%;
+        max-height: 94vh;
+        max-height: 94dvh;
+        padding-bottom: max(30px, env(safe-area-inset-bottom));
+    }
+
+    .modal-close {
+        top: 14px;
+        right: 16px;
+        padding: 10px;
+    }
+
+    .search-box input {
+        font-size: 16px;
+    }
+
+    /* admin: tables scroll sideways instead of breaking the page */
+    .inventory-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .inventory-table {
+        min-width: 760px;
+    }
+
+    .stock-input {
+        width: 76px;
+    }
+}
+
+
+/* ---------- PHONE ---------- */
+
+@media (max-width: 600px) {
+
+    .announcement {
+        font-size: 9px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .checkout-modal {
+        padding: 28px 18px;
+    }
+
+    .checkout-heading h2 {
+        font-size: 32px;
+    }
+
+    .product-grid {
+        gap: 28px 10px;
+    }
+
+    .product-info h3 {
+        font-size: 11px;
+    }
+
+    .cart-item {
+        gap: 12px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .inventory-summary {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-actions {
+        gap: 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .payment-options {
+        grid-template-columns: 1fr 1fr;
+    }
+}

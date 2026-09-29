@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>DWAYT — Everyday, Your Way</title>
+
+    <meta
+        name="description"
+        content="DWAYT — modern everyday clothing designed your way."
+    >
+
+    <!-- EmailJS -->
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement">
+        FREE SHIPPING ON ORDERS OVER ₱2,500
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <a href="#" class="logo">DWAYT</a>
+
+        <nav class="nav-links">
+            <a href="#shop">SHOP</a>
+            <a href="#new-arrivals">NEW ARRIVALS</a>
+            <a href="#about">ABOUT</a>
+            <a href="#faq">FAQ</a>
+            <a href="#" data-track>TRACK ORDER</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                type="button"
+                class="icon-btn"
+                id="searchBtn"
+                aria-label="Search">
+                SEARCH
+            </button>
+
+            <button
+                type="button"
+                class="icon-btn"
+                id="cartBtn">
+                BAG
+                <span id="cartCount">0</span>
+            </button>
+
+            <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">
+                MENU
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- SEARCH -->
+    <div class="search-box" id="searchBox">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section class="hero">
+
+            <img
+                src="images/hero.jpg"
+                alt="DWAYT Collection"
+                class="hero-image"
+            >
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    DWAYT / 2026 COLLECTION
+                </p>
+
+                <h1>
+                    EVERYDAY.<br>
+                    YOUR WAY.
+                </h1>
+
+                <p>
+                    Everyday pieces made for your everyday.
+                </p>
+
+                <a href="#shop" class="hero-button">
+                    SHOP NOW
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+        <section class="intro-section">
+
+            <p class="section-label">DWAYT / EST. 2026</p>
+
+            <h2>
+                CLOTHES FOR<br>
+                EVERYDAY LIVING.
+            </h2>
+
+            <p class="intro-text">
+                DWAYT creates simple, versatile pieces designed
+                to fit your everyday style. Easy to wear. Easy to pair.
+                Made your way.
+            </p>
+
+        </section>
+
+
+        <!-- CATEGORIES -->
+        <section class="categories-section">
+
+            <div class="category-card">
+                <a href="#shop" data-filter-link="Tops">
+                    <img src="images/product1.jpg" alt="DWAYT Tops">
+
+                    <div class="category-overlay">
+                        <span>TOPS</span>
+                        <small>SHOP NOW →</small>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <a href="#shop" data-filter-link="Bottoms">
+                    <img src="images/product2.jpg" alt="DWAYT Bottoms">
+
+                    <div class="category-overlay">
+                        <span>BOTTOMS</span>
+                        <small>SHOP NOW →</small>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <a href="#shop" data-filter-link="Dresses">
+                    <img src="images/dress-velvet-hour.jpg" alt="DWAYT Dresses">
+
+                    <div class="category-overlay">
+                        <span>DRESSES</span>
+                        <small>SHOP NOW →</small>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="category-card">
+                <a href="#shop" data-filter-link="Accessories">
+                    <img src="images/product4.jpg" alt="DWAYT Accessories">
+
+                    <div class="category-overlay">
+                        <span>ACCESSORIES</span>
+                        <small>SHOP NOW →</small>
+                    </div>
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- SHOP -->
+        <section class="shop-section" id="shop">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">DWAYT / SHOP</p>
+
+                    <h2>
+                        SHOP ALL
+                    </h2>
+                </div>
+
+                <p class="product-count" id="productCount">
+                    32 PRODUCTS
+                </p>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="filters">
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="All">
+                    ALL
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="Tops">
+                    TOPS
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="Bottoms">
+                    BOTTOMS
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="Dresses">
+                    DRESSES
+                </button>
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="Accessories">
+                    ACCESSORIES
+                </button>
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+            <div class="product-grid" id="productGrid">
+
+
+                <!-- PRODUCT 1 -->
+                <article
+                    class="product-card"
+                    data-category="Tops"
+                    data-name="ROSE QUAD Thermal Long Sleeve in Charcoal"
+                    data-product-id="product1">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/product1.jpg"
+                            alt="ROSE QUAD Thermal Long Sleeve in Charcoal"
+                        >
+
+                        <span class="product-tag">
+                            BESTSELLER
+                        </span>
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="ROSE QUAD Thermal Long Sleeve in Charcoal"
+                            data-price="899"
+                            data-image="images/product1.jpg"
+                            data-product-id="product1">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>"ROSE QUAD" Thermal Long Sleeve in Charcoal</h3>
+                            <p>OVERSIZED FIT</p>
+                            <small class="stock-label" id="stock-product1"></small>
+                        </div>
+
+                        <strong>₱899</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+                <article
+                    class="product-card"
+                    data-category="Bottoms"
+                    data-name="COLD NAVY HITTER DWAYT PANTS"
+                    data-product-id="product2">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/product2.jpg"
+                            alt="COLD NAVY HITTER DWAYT PANTS"
+                        >
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="COLD NAVY HITTER DWAYT PANTS"
+                            data-price="1299"
+                            data-image="images/product2.jpg"
+                            data-product-id="product2">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>COLD NAVY HITTER DWAYT PANTS</h3>
+                            <p>RELAXED FIT</p>
+                            <small class="stock-label" id="stock-product2"></small>
+                        </div>
+
+                        <strong>₱1,299</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+                <article
+                    class="product-card"
+                    data-category="Dresses"
+                    data-name="VELVET HOUR Mini Dress"
+                    data-product-id="product3">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/dress-velvet-hour.jpg"
+                            alt="VELVET HOUR Mini Dress"
+                        >
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="VELVET HOUR Mini Dress"
+                            data-price="1199"
+                            data-image="images/dress-velvet-hour.jpg"
+                            data-product-id="product3">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>VELVET HOUR Mini Dress</h3>
+                            <p>EVERYDAY DRESS</p>
+                            <small class="stock-label" id="stock-product3"></small>
+                        </div>
+
+                        <strong>₱1,199</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+                <article
+                    class="product-card"
+                    data-category="Accessories"
+                    data-name="GOTHIC RELIC Silver Chain & Cross"
+                    data-product-id="product4">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/product4.jpg"
+                            alt="GOTHIC RELIC Silver Chain & Cross"
+                        >
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="GOTHIC RELIC Silver Chain & Cross"
+                            data-price="799"
+                            data-image="images/product4.jpg"
+                            data-product-id="product4">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>"GOTHIC RELIC" Silver Chain & Cross</h3>
+                            <p>DAILY ESSENTIAL</p>
+                            <small class="stock-label" id="stock-product4"></small>
+                        </div>
+
+                        <strong>₱799</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 5 -->
+                <article
+                    class="product-card"
+                    data-category="Tops"
+                    data-name="MONOGRAM Cuffed Thumbhole Pullover Hoodie"
+                    data-product-id="product99">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/product99.jpg"
+                            alt="MONOGRAM Cuffed Thumbhole Pullover Hoodie"
+                        >
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="MONOGRAM Cuffed Thumbhole Pullover Hoodie"
+                            data-price="699"
+                            data-image="images/product99.jpg"
+                            data-product-id="product99">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>"MONOGRAM" Cuffed Thumbhole Pullover Hoodie</h3>
+                            <p>EVERYDAY BASIC</p>
+                            <small class="stock-label" id="stock-product99"></small>
+                        </div>
+
+                        <strong>₱699</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 6 -->
+                <article
+                    class="product-card"
+                    data-category="Bottoms"
+                    data-name="DWAYT Overpocket Phat Trousers — Charcoal"
+                    data-product-id="product6">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/product6.jpg"
+                            alt="DWAYT Overpocket Phat Trousers — Charcoal"
+                        >
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="DWAYT Overpocket Phat Trousers — Charcoal"
+                            data-price="1099"
+                            data-image="images/product6.jpg"
+                            data-product-id="product6">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>DWAYT Overpocket Phat Trousers — Charcoal</h3>
+                            <p>RELAXED FIT</p>
+                            <small class="stock-label" id="stock-product6"></small>
+                        </div>
+
+                        <strong>₱1,099</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 7 -->
+                <article
+                    class="product-card"
+                    data-category="Dresses"
+                    data-name="MIRA SKIRT IN ANTHRACITE"
+                    data-product-id="product7">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/dress-mira-skirt.jpg"
+                            alt="MIRA SKIRT IN ANTHRACITE"
+                        >
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="MIRA SKIRT IN ANTHRACITE"
+                            data-price="1299"
+                            data-image="images/dress-mira-skirt.jpg"
+                            data-product-id="product7">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>MIRA SKIRT IN ANTHRACITE</h3>
+                            <p>EVERYDAY SKIRT</p>
+                            <small class="stock-label" id="stock-product7"></small>
+                        </div>
+
+                        <strong>₱1,299</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 8 -->
+                <article
+                    class="product-card"
+                    data-category="Accessories"
+                    data-name="DOUBLE ICE Tennis Bracelet"
+                    data-product-id="product8">
+
+                    <div class="product-image-wrap">
+
+                        <img
+                            src="images/product8.jpg"
+                            alt="DOUBLE ICE Tennis Bracelet"
+                        >
+
+                        <button
+                            type="button"
+                            class="quick-add add-cart"
+                            data-name="DOUBLE ICE Tennis Bracelet"
+                            data-price="899"
+                            data-image="images/product8.jpg"
+                            data-product-id="product8">
+                            ADD TO BAG
+                        </button>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <div>
+                            <h3>"DOUBLE ICE" Tennis Bracelet</h3>
+                            <p>EVERYDAY ACCESSORY</p>
+                            <small class="stock-label" id="stock-product8"></small>
+                        </div>
+
+                        <strong>₱899</strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 9 -->
+                <article class="product-card" data-category="Tops" data-name="TACTICAL CAMO Quilted Bomber Jacket" data-product-id="product9">
+                    <div class="product-image-wrap">
+                        <img src="images/product9.jpg" alt="TACTICAL CAMO Quilted Bomber Jacket">
+                        <button type="button" class="quick-add add-cart" data-name="TACTICAL CAMO Quilted Bomber Jacket" data-price="799" data-image="images/product9.jpg" data-product-id="product9">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"TACTICAL CAMO" Quilted Bomber Jacket</h3>
+                            <p>BOXY FIT</p>
+                            <small class="stock-label" id="stock-product9"></small>
+                        </div>
+                        <strong>₱799</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 10 -->
+                <article class="product-card" data-category="Tops" data-name="BANDANA UTILITY Snap-Front Overshirt" data-product-id="product10">
+                    <div class="product-image-wrap">
+                        <img src="images/product10.jpg" alt="BANDANA UTILITY Snap-Front Overshirt">
+                        <button type="button" class="quick-add add-cart" data-name="BANDANA UTILITY Snap-Front Overshirt" data-price="749" data-image="images/product10.jpg" data-product-id="product10">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"BANDANA UTILITY" Snap-Front Overshirt</h3>
+                            <p>RIBBED FIT</p>
+                            <small class="stock-label" id="stock-product10"></small>
+                        </div>
+                        <strong>₱749</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 11 -->
+                <article class="product-card" data-category="Tops" data-name="URBAN TAPESTRY Camo Knit Sweater" data-product-id="product11">
+                    <div class="product-image-wrap">
+                        <img src="images/product11.jpg" alt="URBAN TAPESTRY Camo Knit Sweater">
+                        <button type="button" class="quick-add add-cart" data-name="URBAN TAPESTRY Camo Knit Sweater" data-price="999" data-image="images/product11.jpg" data-product-id="product11">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"URBAN TAPESTRY" Camo Knit Sweater</h3>
+                            <p>EVERYDAY POLO</p>
+                            <small class="stock-label" id="stock-product11"></small>
+                        </div>
+                        <strong>₱999</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 12 -->
+                <article class="product-card" data-category="Tops" data-name="GOTHIC DT Heavyweight Pinstripe Pullover" data-product-id="product12">
+                    <div class="product-image-wrap">
+                        <img src="images/product12.jpg" alt="GOTHIC DT Heavyweight Pinstripe Pullover">
+                        <button type="button" class="quick-add add-cart" data-name="GOTHIC DT Heavyweight Pinstripe Pullover" data-price="1099" data-image="images/product12.jpg" data-product-id="product12">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"GOTHIC DT" Heavyweight Pinstripe Pullover</h3>
+                            <p>RELAXED FIT</p>
+                            <small class="stock-label" id="stock-product12"></small>
+                        </div>
+                        <strong>₱1,099</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 13 -->
+                <article class="product-card" data-category="Tops" data-name="RECONSTRUCTED Oversized Panel Sweatshirt" data-product-id="product13">
+                    <div class="product-image-wrap">
+                        <img src="images/product13.jpg" alt="RECONSTRUCTED Oversized Panel Sweatshirt">
+                        <button type="button" class="quick-add add-cart" data-name="RECONSTRUCTED Oversized Panel Sweatshirt" data-price="599" data-image="images/product13.jpg" data-product-id="product13">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"RECONSTRUCTED" Oversized Panel Sweatshirt</h3>
+                            <p>EVERYDAY BASIC</p>
+                            <small class="stock-label" id="stock-product13"></small>
+                        </div>
+                        <strong>₱599</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 14 -->
+                <article class="product-card" data-category="Tops" data-name="SACRED SLEEVE Oversized Sun-Faded Sweatshirt" data-product-id="product14">
+                    <div class="product-image-wrap">
+                        <img src="images/product14.jpg" alt="SACRED SLEEVE Oversized Sun-Faded Sweatshirt">
+                        <button type="button" class="quick-add add-cart" data-name="SACRED SLEEVE Oversized Sun-Faded Sweatshirt" data-price="949" data-image="images/product14.jpg" data-product-id="product14">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"SACRED SLEEVE" Oversized Sun-Faded Sweatshirt</h3>
+                            <p>SOFT KNIT</p>
+                            <small class="stock-label" id="stock-product14"></small>
+                        </div>
+                        <strong>₱949</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 15 -->
+                <article class="product-card" data-category="Bottoms" data-name="Drift Pants in Sea Gull" data-product-id="product15">
+                    <div class="product-image-wrap">
+                        <img src="images/product15.jpg" alt="Drift Pants in Sea Gull">
+                        <button type="button" class="quick-add add-cart" data-name="Drift Pants in Sea Gull" data-price="1499" data-image="images/product15.jpg" data-product-id="product15">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Drift Pants in Sea Gull</h3>
+                            <p>STRAIGHT FIT</p>
+                            <small class="stock-label" id="stock-product15"></small>
+                        </div>
+                        <strong>₱1,499</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 16 -->
+                <article class="product-card" data-category="Bottoms" data-name="Trail Pants in Woodland Camo" data-product-id="product16">
+                    <div class="product-image-wrap">
+                        <img src="images/product16.jpg" alt="Trail Pants in Woodland Camo">
+                        <button type="button" class="quick-add add-cart" data-name="Trail Pants in Woodland Camo" data-price="1399" data-image="images/product16.jpg" data-product-id="product16">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Trail Pants in Woodland Camo</h3>
+                            <p>RELAXED FIT</p>
+                            <small class="stock-label" id="stock-product16"></small>
+                        </div>
+                        <strong>₱1,399</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 17 -->
+                <article class="product-card" data-category="Bottoms" data-name="Flare Pants in Mauve" data-product-id="product17">
+                    <div class="product-image-wrap">
+                        <img src="images/product17.jpg" alt="Flare Pants in Mauve">
+                        <button type="button" class="quick-add add-cart" data-name="Flare Pants in Mauve" data-price="1099" data-image="images/product17.jpg" data-product-id="product17">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Flare Pants in Mauve</h3>
+                            <p>DENIM ESSENTIAL</p>
+                            <small class="stock-label" id="stock-product17"></small>
+                        </div>
+                        <strong>₱1,099</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 18 -->
+                <article class="product-card" data-category="Bottoms" data-name="Trek Pants Sea Glass" data-product-id="product18">
+                    <div class="product-image-wrap">
+                        <img src="images/product18.jpg" alt="Trek Pants Sea Glass">
+                        <button type="button" class="quick-add add-cart" data-name="Trek Pants Sea Glass" data-price="1299" data-image="images/product18.jpg" data-product-id="product18">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>Trek Pants Sea Glass</h3>
+                            <p>WIDE LEG</p>
+                            <small class="stock-label" id="stock-product18"></small>
+                        </div>
+                        <strong>₱1,299</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 19 -->
+                <article class="product-card" data-category="Bottoms" data-name="LOOSEFIT PANTS iN ICE" data-product-id="product19">
+                    <div class="product-image-wrap">
+                        <img src="images/product19.jpg" alt="LOOSEFIT PANTS iN ICE">
+                        <button type="button" class="quick-add add-cart" data-name="LOOSEFIT PANTS iN ICE" data-price="899" data-image="images/product19.jpg" data-product-id="product19">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>LOOSEFIT PANTS iN ICE</h3>
+                            <p>EVERYDAY SHORTS</p>
+                            <small class="stock-label" id="stock-product19"></small>
+                        </div>
+                        <strong>₱899</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 20 -->
+                <article class="product-card" data-category="Bottoms" data-name="RUSH PHAT SHORTS IN ACID BLUE" data-product-id="product20">
+                    <div class="product-image-wrap">
+                        <img src="images/product20.jpg" alt="RUSH PHAT SHORTS IN ACID BLUE">
+                        <button type="button" class="quick-add add-cart" data-name="RUSH PHAT SHORTS IN ACID BLUE" data-price="1199" data-image="images/product20.jpg" data-product-id="product20">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>RUSH PHAT SHORTS IN ACID BLUE</h3>
+                            <p>LIGHTWEIGHT FIT</p>
+                            <small class="stock-label" id="stock-product20"></small>
+                        </div>
+                        <strong>₱1,199</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 21 -->
+                <article class="product-card" data-category="Dresses" data-name="ASH ROSE Ribbed Midi Dress" data-product-id="product21">
+                    <div class="product-image-wrap">
+                        <img src="images/dress-ash-rose.jpg" alt="ASH ROSE Ribbed Midi Dress">
+                        <button type="button" class="quick-add add-cart" data-name="ASH ROSE Ribbed Midi Dress" data-price="1299" data-image="images/dress-ash-rose.jpg" data-product-id="product21">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>ASH ROSE Ribbed Midi Dress</h3>
+                            <p>RIBBED FIT</p>
+                            <small class="stock-label" id="stock-product21"></small>
+                        </div>
+                        <strong>₱1,299</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 22 -->
+                <article class="product-card" data-category="Dresses" data-name="MIDNIGHT SATIN Slip Dress" data-product-id="product22">
+                    <div class="product-image-wrap">
+                        <img src="images/dress-midnight-satin.jpg" alt="MIDNIGHT SATIN Slip Dress">
+                        <button type="button" class="quick-add add-cart" data-name="MIDNIGHT SATIN Slip Dress" data-price="1399" data-image="images/dress-midnight-satin.jpg" data-product-id="product22">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>MIDNIGHT SATIN Slip Dress</h3>
+                            <p>RELAXED DRESS</p>
+                            <small class="stock-label" id="stock-product22"></small>
+                        </div>
+                        <strong>₱1,399</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 23 -->
+                <article class="product-card" data-category="Dresses" data-name="DUSTED LINEN Day Dress" data-product-id="product23">
+                    <div class="product-image-wrap">
+                        <img src="images/dress-dusted-linen.jpg" alt="DUSTED LINEN Day Dress">
+                        <button type="button" class="quick-add add-cart" data-name="DUSTED LINEN Day Dress" data-price="1349" data-image="images/dress-dusted-linen.jpg" data-product-id="product23">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>DUSTED LINEN Day Dress</h3>
+                            <p>LINEN EVERYDAY</p>
+                            <small class="stock-label" id="stock-product23"></small>
+                        </div>
+                        <strong>₱1,349</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 24 -->
+                <article class="product-card" data-category="Dresses" data-name="CRIMSON MOTH Ruched Mini Dress" data-product-id="product24">
+                    <div class="product-image-wrap">
+                        <img src="images/dress-crimson-moth.jpg" alt="CRIMSON MOTH Ruched Mini Dress">
+                        <button type="button" class="quick-add add-cart" data-name="CRIMSON MOTH Ruched Mini Dress" data-price="1249" data-image="images/dress-crimson-moth.jpg" data-product-id="product24">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>CRIMSON MOTH Ruched Mini Dress</h3>
+                            <p>RUCHED FIT</p>
+                            <small class="stock-label" id="stock-product24"></small>
+                        </div>
+                        <strong>₱1,249</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 25 -->
+                <article class="product-card" data-category="Dresses" data-name="VARSITY GHOST Polo Dress" data-product-id="product25">
+                    <div class="product-image-wrap">
+                        <img src="images/dress-varsity-ghost.jpg" alt="VARSITY GHOST Polo Dress">
+                        <button type="button" class="quick-add add-cart" data-name="VARSITY GHOST Polo Dress" data-price="1199" data-image="images/dress-varsity-ghost.jpg" data-product-id="product25">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>VARSITY GHOST Polo Dress</h3>
+                            <p>POLO DRESS</p>
+                            <small class="stock-label" id="stock-product25"></small>
+                        </div>
+                        <strong>₱1,199</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 26 -->
+                <article class="product-card" data-category="Dresses" data-name="COLD EMBER Soft Knit Dress" data-product-id="product26">
+                    <div class="product-image-wrap">
+                        <img src="images/dress-cold-ember.jpg" alt="COLD EMBER Soft Knit Dress">
+                        <button type="button" class="quick-add add-cart" data-name="COLD EMBER Soft Knit Dress" data-price="1449" data-image="images/dress-cold-ember.jpg" data-product-id="product26">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>COLD EMBER Soft Knit Dress</h3>
+                            <p>SOFT KNIT</p>
+                            <small class="stock-label" id="stock-product26"></small>
+                        </div>
+                        <strong>₱1,449</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 27 -->
+                <article class="product-card" data-category="Accessories" data-name="OBSIDIAN INLAY Band Ring in Antique Silver" data-product-id="product27">
+                    <div class="product-image-wrap">
+                        <img src="images/product27.jpg" alt="OBSIDIAN INLAY Band Ring in Antique Silver">
+                        <button type="button" class="quick-add add-cart" data-name="OBSIDIAN INLAY Band Ring in Antique Silver" data-price="699" data-image="images/product27.jpg" data-product-id="product27">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"OBSIDIAN INLAY" Band Ring in Antique Silver</h3>
+                            <p>DAILY ESSENTIAL</p>
+                            <small class="stock-label" id="stock-product27"></small>
+                        </div>
+                        <strong>₱699</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 28 -->
+                <article class="product-card" data-category="Accessories" data-name="ETERNAL HARMONY Sculptural Ring" data-product-id="product28">
+                    <div class="product-image-wrap">
+                        <img src="images/product28.jpg" alt="ETERNAL HARMONY Sculptural Ring">
+                        <button type="button" class="quick-add add-cart" data-name="ETERNAL HARMONY Sculptural Ring" data-price="1099" data-image="images/product28.jpg" data-product-id="product28">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"ETERNAL HARMONY" Sculptural Ring</h3>
+                            <p>EVERYDAY BAG</p>
+                            <small class="stock-label" id="stock-product28"></small>
+                        </div>
+                        <strong>₱1,099</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 29 -->
+                <article class="product-card" data-category="Accessories" data-name="ARCHIVE UTILITY Layered Chain" data-product-id="product29">
+                    <div class="product-image-wrap">
+                        <img src="images/product29.jpg" alt="ARCHIVE UTILITY Layered Chain">
+                        <button type="button" class="quick-add add-cart" data-name="ARCHIVE UTILITY Layered Chain" data-price="599" data-image="images/product29.jpg" data-product-id="product29">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"ARCHIVE UTILITY" Layered Chain</h3>
+                            <p>EVERYDAY CAP</p>
+                            <small class="stock-label" id="stock-product29"></small>
+                        </div>
+                        <strong>₱599</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 30 -->
+                <article class="product-card" data-category="Accessories" data-name="MONOCHROME TAPESTRY Silk/Cotton Bandana" data-product-id="product30">
+                    <div class="product-image-wrap">
+                        <img src="images/product30.jpg" alt="MONOCHROME TAPESTRY Silk/Cotton Bandana">
+                        <button type="button" class="quick-add add-cart" data-name="MONOCHROME TAPESTRY Silk/Cotton Bandana" data-price="649" data-image="images/product30.jpg" data-product-id="product30">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"MONOCHROME TAPESTRY" Silk/Cotton Bandana</h3>
+                            <p>DAILY ESSENTIAL</p>
+                            <small class="stock-label" id="stock-product30"></small>
+                        </div>
+                        <strong>₱649</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 31 -->
+                <article class="product-card" data-category="Accessories" data-name="NEO-TOKYO Goth Monogram Cap" data-product-id="product31">
+                    <div class="product-image-wrap">
+                        <img src="images/product31.jpg" alt="NEO-TOKYO Goth Monogram Cap">
+                        <button type="button" class="quick-add add-cart" data-name="NEO-TOKYO Goth Monogram Cap" data-price="399" data-image="images/product31.jpg" data-product-id="product31">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"NEO-TOKYO" Goth Monogram Cap</h3>
+                            <p>EVERYDAY BASIC</p>
+                            <small class="stock-label" id="stock-product31"></small>
+                        </div>
+                        <strong>₱399</strong>
+                    </div>
+                </article>
+
+
+                <!-- PRODUCT 32 -->
+                <article class="product-card" data-category="Accessories" data-name="GOLD CREST Six-Panel Hat" data-product-id="product32">
+                    <div class="product-image-wrap">
+                        <img src="images/product32.jpg" alt="GOLD CREST Six-Panel Hat">
+                        <button type="button" class="quick-add add-cart" data-name="GOLD CREST Six-Panel Hat" data-price="599" data-image="images/product32.jpg" data-product-id="product32">ADD TO BAG</button>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <h3>"GOLD CREST" Six-Panel Hat</h3>
+                            <p>EVERYDAY ACCESSORY</p>
+                            <small class="stock-label" id="stock-product32"></small>
+                        </div>
+                        <strong>₱599</strong>
+                    </div>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEW ARRIVALS -->
+        <section class="new-arrivals" id="new-arrivals">
+
+            <div class="new-arrivals-image">
+
+                <img
+                    src="images/product5.jpg"
+                    alt="DWAYT New Arrivals"
+                >
+
+            </div>
+
+            <div class="new-arrivals-content">
+
+                <p class="section-label">
+                    DWAYT / NEW ARRIVALS
+                </p>
+
+                <h2>
+                    NEW<br>
+                    EVERYDAY.
+                </h2>
+
+                <p>
+                    Fresh pieces designed to become
+                    part of your everyday rotation.
+                </p>
+
+                <a
+                    href="#shop"
+                    class="outline-button">
+                    EXPLORE COLLECTION
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-section" id="about">
+
+            <p class="section-label">
+                DWAYT / ABOUT
+            </p>
+
+            <div class="about-content">
+
+                <h2>
+                    YOUR STYLE.<br>
+                    YOUR WAY.
+                </h2>
+
+                <div class="about-text">
+
+                    <p>
+                        DWAYT is an everyday clothing brand
+                        built around simplicity, comfort,
+                        and personal style.
+                    </p>
+
+                    <p>
+                        We believe getting dressed should
+                        feel effortless. Our pieces are made
+                        to be mixed, matched, and worn your way.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="faq-section" id="faq">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">
+                        DWAYT / FAQ
+                    </p>
+
+                    <h2>
+                        QUESTIONS?
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="faq-list">
+
+                <div class="faq-item">
+
+                    <button type="button" class="faq-question">
+                        HOW LONG DOES DELIVERY TAKE?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Standard delivery usually takes
+                        3–7 business days depending on your
+                        location. Express delivery is available
+                        during checkout.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button type="button" class="faq-question">
+                        WHAT PAYMENT METHODS DO YOU ACCEPT?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        DWAYT accepts GCash, Maya, and Cash on Delivery.
+                        GCash and Maya payments are verified by our team before shipping.
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button type="button" class="faq-question">
+                        WHAT SIZES DO YOU HAVE? (SIZE GUIDE)
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Tops, bottoms and dresses come in S, M, L and XL. You choose
+                        your size when you add an item to your bag, and it appears on
+                        your order. Between sizes? Go up for a relaxed fit, or message
+                        us and we will help you choose.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button type="button" class="faq-question">
+                        RETURNS &amp; EXCHANGES
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        If your item arrives damaged or in the wrong size, message us
+                        within 7 days of delivery with your order number and photos.
+                        Items must be unworn with tags attached. Exchanges depend on
+                        available stock.
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item">
+
+                    <button type="button" class="faq-question">
+                        CAN I CANCEL MY ORDER?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        Please contact DWAYT as soon as possible
+                        after placing your order. Cancellation
+                        requests are subject to order status.
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <button type="button" class="faq-question">
+                        HOW CAN I CONTACT DWAYT?
+                        <span>+</span>
+                    </button>
+
+                    <div class="faq-answer">
+                        You may contact us through the contact
+                        information provided below.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="contact-section" id="contact">
+
+            <div>
+
+                <p class="section-label">
+                    DWAYT / CONTACT
+                </p>
+
+                <h2>
+                    LET'S TALK.
+                </h2>
+
+            </div>
+
+            <div class="contact-details">
+
+                <p>
+                    EMAIL
+                </p>
+
+                <a href="mailto:akiramurata04@gmail.com">
+                    akiramurata04@gmail.com
+                </a>
+
+                <p>
+                    INSTAGRAM
+                </p>
+
+                <span>
+                    @DWAYT
+                </span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- CART OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+
+    <!-- CART DRAWER -->
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <h2>
+                YOUR BAG
+            </h2>
+
+            <button type="button" id="closeCart">
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="cart-items" id="cartItems"></div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    SUBTOTAL
+                </span>
+
+                <strong id="cartSubtotal">
+                    ₱0
+                </strong>
+
+            </div>
+
+            <button
+                type="button"
+                class="checkout-button"
+                id="checkoutBtn">
+                PROCEED TO CHECKOUT
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CHECKOUT MODAL -->
+    <div class="modal" id="checkoutModal">
+
+        <div class="checkout-modal">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeCheckout">
+                ×
+            </button>
+
+
+            <div class="checkout-heading">
+
+                <p class="section-label">
+                    DWAYT / CHECKOUT
+                </p>
+
+                <h2>
+                    COMPLETE YOUR ORDER
+                </h2>
+
+            </div>
+
+
+            <form id="checkoutForm">
+
+
+                <!-- CUSTOMER -->
+                <div class="checkout-section">
+
+                    <h3>
+                        01 / CUSTOMER INFORMATION
+                    </h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group full">
+
+                            <label for="customerName">
+                                FULL NAME *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerName"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerEmail">
+                                GMAIL ADDRESS *
+                            </label>
+
+                            <input
+                                type="email"
+                                id="customerEmail"
+                                placeholder="example@gmail.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerPhone">
+                                MOBILE NUMBER *
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="customerPhone"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DELIVERY -->
+                <div class="checkout-section">
+
+                    <h3>
+                        02 / DELIVERY INFORMATION
+                    </h3>
+
+                    <div class="form-grid">
+
+                        <div class="form-group full">
+
+                            <label for="customerAddress">
+                                COMPLETE ADDRESS *
+                            </label>
+
+                            <textarea
+                                id="customerAddress"
+                                rows="3"
+                                required></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerCity">
+                                CITY / MUNICIPALITY *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerCity"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="customerProvince">
+                                PROVINCE *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customerProvince"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="postalCode">
+                                POSTAL CODE *
+                            </label>
+
+                            <input
+                                type="text"
+                                id="postalCode"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="deliveryOption">
+                                DELIVERY OPTION *
+                            </label>
+
+                            <select id="deliveryOption" required>
+
+                                <option value="Standard Delivery - ₱100">
+                                    Standard Delivery — ₱100
+                                </option>
+
+                                <option value="Express Delivery - ₱180">
+                                    Express Delivery — ₱180
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PAYMENT -->
+                <div class="checkout-section">
+
+                    <h3>
+                        03 / PAYMENT METHOD
+                    </h3>
+
+
+                    <div class="payment-options">
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="GCash"
+                                required
+                            >
+
+                            <span>
+                                GCASH
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="Maya"
+                            >
+
+                            <span>
+                                MAYA
+                            </span>
+
+                        </label>
+
+
+                        <label class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="paymentMethod"
+                                value="Cash on Delivery"
+                            >
+
+                            <span>
+                                CASH ON DELIVERY
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOTES -->
+                <div class="checkout-section">
+
+                    <h3>
+                        04 / ORDER NOTES
+                    </h3>
+
+                    <div class="form-group">
+
+                        <label for="orderNotes">
+                            NOTES
+                        </label>
+
+                        <textarea
+                            id="orderNotes"
+                            rows="3"
+                            placeholder="Optional"></textarea>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUMMARY -->
+                <div class="checkout-summary">
+
+                    <h3>
+                        ORDER SUMMARY
+                    </h3>
+
+                    <div
+                        id="checkoutItems"
+                        class="checkout-items">
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            SUBTOTAL
+                        </span>
+
+                        <strong id="checkoutSubtotal">
+                            ₱0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>
+                            SHIPPING
+                        </span>
+
+                        <strong id="checkoutShipping">
+                            ₱100
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            TOTAL
+                        </span>
+
+                        <strong id="checkoutTotal">
+                            ₱0
+                        </strong>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="place-order-button"
+                        id="placeOrderBtn">
+                        PLACE ORDER
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal" id="successModal">
+
+        <div class="success-modal">
+
+            <div class="success-icon">
+                ✓
+            </div>
+
+            <p class="section-label">
+                DWAYT / ORDER CONFIRMED
+            </p>
+
+            <h2>
+                THANK YOU.
+            </h2>
+
+            <p id="successMessage">
+                Your order has been successfully placed.
+            </p>
+
+            <div class="order-number-box">
+
+                <span>
+                    ORDER NUMBER
+                </span>
+
+                <strong id="successOrderNumber">
+                    DWAYT-000000
+                </strong>
+
+            </div>
+
+            <p
+                class="email-confirmation"
+                id="emailConfirmationText">
+                Order confirmation has been sent to your email.
+            </p>
+
+            <button
+                type="button"
+                class="checkout-button"
+                id="closeSuccess">
+                CONTINUE SHOPPING
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SIZE MODAL -->
+    <div class="modal" id="sizeModal">
+        <div class="gcash-modal">
+            <button type="button" class="modal-close" id="closeSize">×</button>
+            <p class="section-label">DWAYT / SIZE</p>
+            <h2>CHOOSE YOUR SIZE.</h2>
+            <p class="gcash-intro" id="sizeProductName"></p>
+            <div class="payment-options" id="sizeOptions"></div>
+            <p id="sizeError" class="gcash-error"></p>
+            <button type="button" class="checkout-button" id="sizeConfirmBtn">ADD TO BAG</button>
+        </div>
+    </div>
+
+
+    <!-- TRACK ORDER MODAL -->
+    <div class="modal" id="trackModal">
+        <div class="gcash-modal">
+            <button type="button" class="modal-close" id="closeTrack">×</button>
+            <p class="section-label">DWAYT / TRACK ORDER</p>
+            <h2>TRACK YOUR ORDER.</h2>
+            <form id="trackForm">
+                <div class="form-group">
+                    <label for="trackOrder">ORDER NUMBER</label>
+                    <input type="text" id="trackOrder" placeholder="DWAYT-123456" required>
+                </div>
+                <div class="form-group">
+                    <label for="trackEmail">EMAIL USED AT CHECKOUT</label>
+                    <input type="email" id="trackEmail" required>
+                </div>
+                <p id="trackResult" class="track-result"></p>
+                <button type="submit" class="checkout-button">CHECK STATUS</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- GCASH PAYMENT MODAL -->
+    <div class="modal" id="gcashModal">
+
+        <div class="gcash-modal">
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeGcash">
+                ×
+            </button>
+
+            <p class="section-label">
+                DWAYT / GCASH PAYMENT
+            </p>
+
+            <h2>
+                PAY WITH GCASH OR MAYA.
+            </h2>
+
+            <p class="gcash-intro">
+                Send the exact amount below to our GCash. Maya users can send it
+                to the same number. Then enter the reference number from your receipt.
+            </p>
+
+            <img
+                id="gcashQrImage"
+                class="gcash-qr"
+                alt="DWAYT GCash QR code"
+            >
+
+            <div class="gcash-details">
+
+                <div>
+                    <span>AMOUNT TO PAY</span>
+                    <strong id="gcashAmount">₱0</strong>
+                </div>
+
+                <div>
+                    <span>GCASH NUMBER</span>
+                    <strong id="gcashNumberText">09XX XXX XXXX</strong>
+                </div>
+
+                <div>
+                    <span>ACCOUNT NAME</span>
+                    <strong id="gcashAccountName">DWAYT</strong>
+                </div>
+
+                <div>
+                    <span>ORDER NUMBER</span>
+                    <strong id="gcashOrderNumber">DWAYT-000000</strong>
+                </div>
+
+            </div>
+
+            <button
+                type="button"
+                class="gcash-copy"
+                id="gcashCopyBtn">
+                COPY NUMBER
+            </button>
+
+            <div class="form-group">
+
+                <label for="gcashReference">
+                    REFERENCE NUMBER *
+                </label>
+
+                <input
+                    type="text"
+                    id="gcashReference"
+                    inputmode="numeric"
+                    maxlength="20"
+                    placeholder="Reference number from your receipt">
+
+            </div>
+
+            <p id="gcashError" class="gcash-error"></p>
+
+            <button
+                type="button"
+                class="checkout-button"
+                id="gcashConfirmBtn">
+                I HAVE PAID — PLACE ORDER
+            </button>
+
+            <p class="gcash-note">
+                Your order will be marked as pending until
+                DWAYT verifies your payment.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-top">
+
+            <div>
+
+                <a href="#" class="footer-logo">
+                    DWAYT
+                </a>
+
+                <p>
+                    EVERYDAY, YOUR WAY.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>SHOP</h4>
+
+                <a href="#shop">ALL</a>
+                <a href="#shop">TOPS</a>
+                <a href="#shop">BOTTOMS</a>
+                <a href="#shop">DRESSES</a>
+                <a href="#shop">ACCESSORIES</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>INFO</h4>
+
+                <a href="#about">ABOUT</a>
+                <a href="#faq">FAQ</a>
+                <a href="#" data-track>TRACK ORDER</a>
+                <a href="#contact">CONTACT</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>FOLLOW</h4>
+
+                <a href="#">INSTAGRAM</a>
+                <a href="#">FACEBOOK</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 DWAYT. ALL RIGHTS RESERVED.
+            </span>
+
+            <span>
+                MADE FOR EVERYDAY.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <script src="config.js"></script>
+    <script src="products.js"></script>
+    <script src="store.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

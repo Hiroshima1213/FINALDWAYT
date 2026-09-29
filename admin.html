@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>DWAYT — Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body class="admin-locked">
+
+    <!-- ADMIN LOGIN -->
+    <div class="modal active" id="adminLoginModal">
+
+        <div class="admin-login-modal">
+
+            <p class="section-label">DWAYT / ADMIN</p>
+
+            <h2>ADMIN LOGIN</h2>
+
+            <p class="admin-description">
+                Sign in to manage DWAYT inventory.
+            </p>
+
+            <form id="adminLoginForm">
+
+                <div class="form-group">
+                    <label for="adminUsername">ADMIN EMAIL</label>
+                    <input type="email" id="adminUsername" autocomplete="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">PASSWORD</label>
+                    <input type="password" id="adminPassword" autocomplete="current-password" required>
+                </div>
+
+                <p id="adminLoginError" class="admin-login-error"></p>
+
+                <button type="submit" class="checkout-button">
+                    LOGIN
+                </button>
+
+            </form>
+
+            <a href="index.html" class="admin-back-link">← BACK TO STORE</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADMIN DASHBOARD -->
+    <div class="admin-dashboard" id="adminDashboard">
+
+        <div class="admin-dashboard-header">
+
+            <div>
+                <p class="section-label">DWAYT / ADMIN</p>
+                <h2>INVENTORY</h2>
+            </div>
+
+            <div class="admin-actions">
+
+                <a href="index.html" class="admin-close-btn">VIEW STORE</a>
+
+                <button type="button" class="admin-close-btn" id="adminLogout">
+                    LOG OUT
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="inventory-summary">
+
+            <div class="inventory-stat">
+                <span>TOTAL PRODUCTS</span>
+                <strong id="adminTotalProducts">32</strong>
+            </div>
+
+            <div class="inventory-stat">
+                <span>TOTAL STOCK</span>
+                <strong id="adminTotalStock">0</strong>
+            </div>
+
+            <div class="inventory-stat">
+                <span>LOW STOCK</span>
+                <strong id="adminLowStock">0</strong>
+            </div>
+
+            <div class="inventory-stat">
+                <span>OUT OF STOCK</span>
+                <strong id="adminOutOfStock">0</strong>
+            </div>
+
+        </div>
+
+        <div class="inventory-table-wrap">
+
+            <table class="inventory-table">
+
+                <thead>
+                    <tr>
+                        <th>PRODUCT</th>
+                        <th>CATEGORY</th>
+                        <th>PRICE</th>
+                        <th>CURRENT STOCK</th>
+                        <th>STATUS</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody id="inventoryTableBody"></tbody>
+
+            </table>
+
+        </div>
+
+        <div class="inventory-table-wrap" style="margin-bottom:32px">
+
+            <table class="inventory-table">
+                <thead>
+                    <tr>
+                        <th>ORDER</th>
+                        <th>CUSTOMER</th>
+                        <th>ITEMS</th>
+                        <th>TOTAL</th>
+                        <th>PAYMENT</th>
+                        <th>STATUS</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTableBody"></tbody>
+            </table>
+
+        </div>
+
+        <div class="admin-note" style="margin-bottom:24px">
+
+            <strong>1 / IMPORT NEW ORDERS</strong>
+
+            <p>
+                Every order email has an ORDER CODE (starts with DWAYT1:).
+                Paste one or many codes below to add those orders here.
+            </p>
+
+            <div class="form-group" style="margin:14px 0">
+                <textarea id="importCode" rows="3" placeholder="Paste order code(s) here"></textarea>
+            </div>
+
+            <button type="button" class="save-stock-btn" id="importOrderBtn">IMPORT ORDERS</button>
+
+            <p id="importMessage" style="margin-top:12px;font-weight:700"></p>
+
+        </div>
+
+        <div class="admin-note" style="margin-bottom:24px">
+
+            <strong>2 / PUBLISH TO CUSTOMERS</strong>
+
+            <p>
+                After you change stock or order status, download the file below and upload it
+                to your GitHub repo (replace the old one). Customers then see the new stock
+                and their order status when they track.
+            </p>
+
+            <div style="margin-top:14px">
+                <button type="button" class="save-stock-btn" id="publishBtn">DOWNLOAD store-data.json</button>
+            </div>
+
+        </div>
+
+        <div class="admin-note">
+
+            <strong>INVENTORY NOTE</strong>
+
+            <p>
+                Orders and stock are saved in this browser. Use the same browser and device
+                every time you manage the store. Cancelling an order puts its items back in stock.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="products.js"></script>
+    <script src="store.js"></script>
+    <script src="admin.js"></script>
+
+</body>
+</html>
